@@ -1,0 +1,55 @@
+# ═══════════════════════════════════════════════════════
+# .gitignore — Projet Power BI
+# ═══════════════════════════════════════════════════════
+
+# ── Fichiers binaires Power BI ─────────────────────────
+# Exclure les .pbix : format binaire, non diffable
+# (Utiliser .pbip + TMDL à la place)
+*.pbix
+
+# ── Caches et fichiers temporaires Power BI ────────────
+*.pbix.bak
+*.pbib
+.pbi/
+LocalSettings.json
+
+# ── Dossiers de cache Tabular Editor ───────────────────
+.TabularEditor/
+*.te3pack
+
+# ── Logs et fichiers de débogage ───────────────────────
+*.log
+FlightRecorder*.trc
+AnalysisServicesWorkspaces/
+
+# ── Credentials et fichiers sensibles ──────────────────
+# NE JAMAIS versionner des mots de passe ou clés API
+*.env
+.env.*
+credentials.json
+appsettings.local.json
+secrets.yml
+
+# ── Système d'exploitation ─────────────────────────────
+.DS_Store          # macOS
+Thumbs.db          # Windows
+desktop.ini
+
+# ── IDE et éditeurs ────────────────────────────────────
+.vscode/settings.json
+*.suo
+*.user
+
+# ── Node.js (si scripts d'automatisation) ──────────────
+node_modules/
+npm-debug.log
+
+# ── Python (si scripts d'automatisation) ───────────────
+__pycache__/
+*.pyc
+.venv/
+
+# ── Rapports générés (ne pas versionner les outputs) ───
+dist/
+output/
+exports/
