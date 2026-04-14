@@ -128,6 +128,12 @@ table Sales
 		displayFolder: Ratios
 		lineageTag: 7f1dad48-8df8-4bf4-8316-7a6126408e1d
 
+	measure Mes_Sales = SUM(Sales[Sales])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4b97ce1b-b93b-4eb5-a569-34c852f7b0e8
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
 	column SalesOrderNumber
 		dataType: string
 		isHidden
