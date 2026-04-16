@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "93aedcde00606793a795",
+  "position": {
+    "x": 170.14925373134326,
+    "y": 503.28358208955223,
+    "z": 25000,
+    "height": 36.71641791044776,
+    "width": 268.65671641791045,
+    "tabOrder": 25000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Benchmak"
+                      }
+                    },
+                    "textStyle": {}
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "k",
+                                "Entity": "KPI Selector",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "Benchmark Title"
+                                },
+                                "Name": "KPI Selector.Benchmark Title"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "KPI Selector.Benchmark Title"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Benchmak",
+                      "utterance": "benchmark title"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Benchmak"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

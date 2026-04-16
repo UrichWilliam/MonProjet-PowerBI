@@ -22,6 +22,8 @@ ref table Sales
 ref table Targets
 ref table Salesperson
 ref table Date
+ref table Table
+ref table 'KPI Selector'
 
 ref cultureInfo en-US
 
