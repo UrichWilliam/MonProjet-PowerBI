@@ -1,0 +1,16 @@
+{
+  "name": "City Park",
+  "dataColors": [
+    "#A48CDA",
+    "#AE9FD0",
+    "#D3CBE7",
+    "#CD4C46",
+    "#71AFE2",
+    "#8D6FD1",
+    "#EE9E64",
+    "#95DABB"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#070f25",
+  "tableAccent": "#0F1934"
+}

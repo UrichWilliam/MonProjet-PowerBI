@@ -1,0 +1,49 @@
+table Table
+	lineageTag: 27881ec0-82b9-4c86-b984-797bb04ec76b
+
+	measure Mes_KPI_Max = ```
+			
+			    CALCULATE(
+			        MAXX(
+			            ALL('Product'[Category]), 
+			            [Mes_Sales]
+			            --'KPI Selector'[Selected KPI Value]
+			            --SELECTEDMEASURE()
+			            
+			        )
+			    )
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 13c30007-c417-4a2a-ad3d-2f966a96c81c
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Mes_KPI_Remaining = ```
+			
+			    [Mes_KPI_Max] - [Mes_Sales]
+			    --[Mes_KPI_Max] - SELECTEDMEASURE()
+			    
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bb9dd474-c256-4d4c-9a11-f85d06526a44
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Column
+		formatString: 0
+		lineageTag: 23afc586-42d5-4384-beb7-66089a6951db
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 1c47e8f723f24be68a9b44a0664ecf21
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

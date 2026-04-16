@@ -1,10 +1,11 @@
 table Sales
 	lineageTag: c90c54c3-ecc7-4006-acae-213e629b2b9e
 
-	measure Profit =
+	measure Mes_Profit =
 			
-			SUM('Sales'[Sales]) - SUM('Sales'[Cost])
+			[Mes_Sales] - [Mes_Cost]
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Profit
 		lineageTag: cb608a6f-59ce-4595-a7a2-65dad7020149
 
 		extendedProperty MeasureTemplate =
@@ -15,10 +16,11 @@ table Sales
 
 		changedProperty = FormatString
 
-	measure 'Profit Margin' =
+	measure Mes_Profit_Margin =
 			
-			DIVIDE([Profit], SUM('Sales'[Sales]))
+			DIVIDE([Mes_Profit], [Mes_Sales])
 		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Profit
 		lineageTag: ee424faf-c9bf-4309-a6b4-088258944206
 
 		extendedProperty MeasureTemplate =
@@ -65,18 +67,18 @@ table Sales
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-AU"}
 
-	measure Orders =
+	measure Mes_Orders =
 			
 			DISTINCTCOUNT(Sales[SalesOrderNumber])
 		formatString: #,0
-		displayFolder: Counts
+		displayFolder: Order
 		lineageTag: a17bce87-617a-4ada-b8bd-86a1532c1836
 
 	measure 'Order Lines' =
 			
 			COUNTROWS(Sales)
 		formatString: #,0
-		displayFolder: Counts
+		displayFolder: Order
 		lineageTag: 8ba76031-b2f7-488d-849e-afee0cfbde36
 
 	measure 'Sales % All Region' =
@@ -130,9 +132,189 @@ table Sales
 
 	measure Mes_Sales = SUM(Sales[Sales])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total
 		lineageTag: 4b97ce1b-b93b-4eb5-a569-34c852f7b0e8
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Mes_Cost = SUM(Sales[Cost])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total
+		lineageTag: 773ef9df-9873-4374-956d-2dc63d431e88
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Mes_LY_Cost = ```
+			
+			    CALCULATE(
+			        SUM(Sales[Cost]),
+			        SAMEPERIODLASTYEAR('Date'[Date])
+			    )
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total
+		lineageTag: 27e78233-48f7-42ca-bfca-6af10c752d0b
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Mes_LY_Sales = ```
+			
+			    CALCULATE(
+			        SUM(Sales[Sales]),
+			        SAMEPERIODLASTYEAR('Date'[Date])
+			    )
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total
+		lineageTag: 6e656032-3932-4c57-97cf-06dc608a370b
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'YoY Sales %' = ```
+			
+			DIVIDE(
+			    [Mes_Sales]- [Mes_LY_Sales],
+			    [Mes_LY_Sales]
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Total
+		lineageTag: ccdca458-4c5c-4583-85c4-b2b5909ba154
+
+	measure 'YoY Sales Direction' = ```
+			
+			IF( [YoY Sales %] >= 0, "Up", "Down" )
+			
+			```
+		displayFolder: Total
+		lineageTag: caa12e3e-2d67-42cb-a7cf-3c9afdef5a99
+
+	measure 'YoY Sales Label' =
+			
+			VAR pct = [YoY Sales %]
+			RETURN
+			IF(
+			    ISBLANK(pct),
+			    BLANK(),
+			    IF(
+			        pct >= 0,
+			        "▲ " & FORMAT(pct, "0.00%") & " vs PY",
+			        "▼ " & FORMAT(ABS(pct), "0.00%") & " vs PY"
+			    )
+			)
+		displayFolder: Total
+		lineageTag: bcf03ff2-a9e5-4be1-a8e5-d3120429e45e
+
+	measure Mes_LY_Profit =
+			
+			[Mes_LY_Sales] - [Mes_LY_Cost]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Profit
+		lineageTag: c5e36e97-5efc-4612-807a-2e2b51857dd2
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'YoY Profit %' = ```
+			
+			DIVIDE(
+			    [Mes_Profit]- [Mes_LY_Profit],
+			    [Mes_LY_Profit]
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profit
+		lineageTag: 3782ad12-b43d-4ca0-94ef-a2744cb0044f
+
+	measure 'YoY Profit Label' =
+			
+			VAR pct = [YoY Profit %]
+			RETURN
+			IF(
+			    ISBLANK(pct),
+			    BLANK(),
+			    IF(
+			        pct >= 0,
+			        "▲ " & FORMAT(pct, "0.00%") & " vs PY",
+			        "▼ " & FORMAT(ABS(pct), "0.00%") & " vs PY"
+			    )
+			)
+		displayFolder: Profit
+		lineageTag: ce421921-2c30-49f8-9d7f-ecd205786138
+
+	measure Mes_LY_Orders = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT(Sales[SalesOrderNumber]),
+			        SAMEPERIODLASTYEAR('Date'[Date])
+			    )
+			```
+		formatString: 0
+		displayFolder: Order
+		lineageTag: 830cba03-804b-4289-b119-62aa656eb25f
+
+	measure 'YoY Orders %' = ```
+			
+			DIVIDE(
+			    [Mes_Orders]- [Mes_LY_Orders],
+			    [Mes_LY_Orders]
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Order
+		lineageTag: ad4bd5a9-2be6-4097-b668-a55ead6b165a
+
+	measure 'YoY Orders Label' =
+			
+			VAR pct = [YoY Orders %]
+			RETURN
+			IF(
+			    ISBLANK(pct),
+			    BLANK(),
+			    IF(
+			        pct >= 0,
+			        "▲ " & FORMAT(pct, "0.00%") & " vs PY",
+			        "▼ " & FORMAT(ABS(pct), "0.00%") & " vs PY"
+			    )
+			)
+		displayFolder: Order
+		lineageTag: 2afbc2de-ef92-4e98-963f-158b05cd1050
+
+	measure Mes_LY_Profit_Margin =
+			
+			DIVIDE( [Mes_LY_Profit], [Mes_LY_Sales])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profit
+		lineageTag: d66fd80b-b6b2-47ca-aa83-e34c78721a52
+
+	measure 'YoY Profit Margin %' = ```
+			
+			    DIVIDE(
+			        [Mes_Profit_Margin] - [Mes_LY_Profit_Margin], 
+			        ABS([Mes_LY_Profit_Margin])
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profit
+		lineageTag: f8ac991d-6a66-453d-a873-114209642038
+
+	measure 'YoY Profit Margin Label' =
+			
+			VAR pct = [YoY Profit Margin %]
+			RETURN
+			IF(
+			    ISBLANK(pct),
+			    BLANK(),
+			    IF(
+			        pct >= 0,
+			        "▲ " & FORMAT(pct, "0.00%") & " vs PY",
+			        "▼ " & FORMAT(ABS(pct), "0.00%") & " vs PY"
+			    )
+			)
+		displayFolder: Profit
+		lineageTag: 94712b94-6f37-4064-b7cd-e1510e41c61b
 
 	column SalesOrderNumber
 		dataType: string

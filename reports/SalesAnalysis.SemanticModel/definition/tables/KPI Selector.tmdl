@@ -1,0 +1,86 @@
+table 'KPI Selector'
+	lineageTag: 7101fc37-fef5-408c-9629-37f5f515239f
+
+	measure 'Selected KPI Number' =
+			
+			SELECTEDVALUE('KPI Selector'[KPI Selector Commande])
+		formatString: 0
+		lineageTag: bdc06e85-e361-4319-a90e-5197e420bc4c
+
+	measure 'Benchmark Title' = ```
+			
+			[Selected KPI Label] & " Benchmark by Category"
+			
+			```
+		lineageTag: 814a0491-38d7-40cb-9f1e-ad9a680184b0
+
+	measure 'Selected KPI Label' = ```
+			
+			SWITCH(
+			    [Selected KPI Number],
+			    0, "Total Sales",
+			    1, "Total Profit",
+			    2, "Profit Margin",
+			    3, "Orders"
+			)
+			
+			```
+		lineageTag: 854d0da8-c028-42a8-825b-5bf746d26663
+
+	measure 'Selected KPI Value' =
+			
+			SELECTEDVALUE('KPI Selector'[KPI Selector Champs])
+		lineageTag: 73b97815-6850-4d83-a4eb-2601c5eb3efe
+
+	measure 'Selected KPI Measure' = SELECTEDMEASURE()
+		lineageTag: a96e01d1-78e0-4f60-869d-c8cfbee35b97
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI Selector'
+		lineageTag: f3655026-cea6-42fb-8e9a-d2a5c2a7d0f5
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'KPI Selector Commande'
+
+		relatedColumnDetails
+			groupByColumn: 'KPI Selector Champs'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI Selector Champs'
+		isHidden
+		lineageTag: 1d5c7e57-9346-4486-aff5-e8b4ddf36a60
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'KPI Selector Commande'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI Selector Commande'
+		isHidden
+		formatString: 0
+		lineageTag: ce3e6088-d129-41f1-9f68-28fadbcec9bb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'KPI Selector' = calculated
+		mode: import
+		source =
+				{
+				    ("Total Sales", NAMEOF('Sales'[Mes_Sales]), 0),
+				    ("Total Profit", NAMEOF('Sales'[Mes_Profit]), 1),
+				    ("Profit Margin", NAMEOF('Sales'[Mes_Profit_Margin]), 2),
+				    ("Orders", NAMEOF('Sales'[Mes_Orders]), 3)
+				}
+
+	annotation PBI_Id = b505a37a560e463eb96b2981504187a9
+

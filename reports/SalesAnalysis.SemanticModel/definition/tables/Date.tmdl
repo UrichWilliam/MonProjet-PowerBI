@@ -60,6 +60,20 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
+	column MonthNumber = MONTH('Date'[Date])
+		formatString: 0
+		lineageTag: d3f7e20a-a57c-4cc8-9854-f26742d8e0cf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName = FORMAT('Date'[Date], "MMM")
+		lineageTag: 3f856b29-debf-451b-aba7-ac86e22d591f
+		summarizeBy: none
+		sortByColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy Fiscal
 		lineageTag: 38e8b639-d048-45e2-976b-5375b7f5068a
 
