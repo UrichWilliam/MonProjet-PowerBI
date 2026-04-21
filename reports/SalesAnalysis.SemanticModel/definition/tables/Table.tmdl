@@ -6,10 +6,16 @@ table Table
 			    CALCULATE(
 			        MAXX(
 			            ALL('Product'[Category]), 
-			            [Mes_Sales]
+			            --[Mes_Sales]
 			            --'KPI Selector'[Selected KPI Value]
 			            --SELECTEDMEASURE()
-			            
+			            SWITCH(
+			                [Selected KPI Number],
+			                0, [Mes_Sales],
+			                1, [Mes_Profit],
+			                2, [Mes_Profit_Margin],
+			                3, [Mes_Orders]
+			            )
 			        )
 			    )
 			```
@@ -20,8 +26,20 @@ table Table
 
 	measure Mes_KPI_Remaining = ```
 			
-			    [Mes_KPI_Max] - [Mes_Sales]
+			    --[Mes_KPI_Max] - [Mes_Sales]
 			    --[Mes_KPI_Max] - SELECTEDMEASURE()
+			
+			    VAR Selected_KPI_Value =
+			        SWITCH (
+			            [Selected KPI Number],
+			            0, [Mes_Sales],
+			            1, [Mes_Profit],
+			            2, [Mes_Profit_Margin],
+			            3, [Mes_Orders]
+			        )
+			    RETURN
+			        [Mes_KPI_Max] - Selected_KPI_Value
+			
 			    
 			
 			```

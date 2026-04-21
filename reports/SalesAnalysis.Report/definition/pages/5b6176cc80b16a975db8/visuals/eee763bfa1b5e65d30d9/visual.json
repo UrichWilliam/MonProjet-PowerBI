@@ -218,5 +218,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5833f17418a06727b384",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "YoY Sales Label"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
