@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "dc4425f11e4ac9da911d",
+  "name": "03da65ccde5397ac55ad",
   "position": {
-    "x": 196.11940298507463,
-    "y": 81.492537313432834,
-    "z": 21000,
-    "height": 51.940298507462686,
-    "width": 163.88059701492537,
-    "tabOrder": 21000
+    "x": 670.97621000820345,
+    "y": 282.4610336341263,
+    "z": 38002,
+    "height": 88.203445447087773,
+    "width": 300.3117309269893,
+    "tabOrder": 38002
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Sales"
                     }
                   },
-                  "Property": "Mes_Sales"
+                  "Property": "Avg Deal Size"
                 }
               },
-              "queryRef": "Sales.Mes_Total_Sales",
-              "nativeQueryRef": "Mes_Sales"
+              "queryRef": "Sales.Avg Deal Size",
+              "nativeQueryRef": "Avg Deal Size"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Sales"
                   }
                 },
-                "Property": "Mes_Sales"
+                "Property": "Avg Deal Size"
               }
             },
             "direction": "Descending"
@@ -52,26 +52,26 @@
       }
     },
     "objects": {
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "32D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -80,41 +80,18 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "background": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total Sales'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "heading": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Heading2'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
                 }
               }
             }
@@ -127,7 +104,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "46573b43858611936c70",
+        "name": "7e72f01c8a0760a80c85",
         "field": {
           "Measure": {
             "Expression": {
@@ -135,7 +112,7 @@
                 "Entity": "Sales"
               }
             },
-            "Property": "Mes_Sales"
+            "Property": "Avg Deal Size"
           }
         },
         "type": "Advanced"

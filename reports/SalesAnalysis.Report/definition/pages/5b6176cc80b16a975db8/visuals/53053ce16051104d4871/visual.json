@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8ee8b1f530b690435ca2",
+  "name": "53053ce16051104d4871",
   "position": {
-    "x": 971.39465875370911,
-    "y": 81.66172106824925,
-    "z": 34000,
-    "height": 176.61721068249255,
-    "width": 289.61424332344211,
-    "tabOrder": 34000
+    "x": 665.7260049220672,
+    "y": 438.91714520098441,
+    "z": 37000,
+    "height": 242.55947497949137,
+    "width": 306.61197703035276,
+    "tabOrder": 37000
   },
   "visual": {
     "visualType": "donutChart",
@@ -42,28 +42,12 @@
                       "Entity": "Sales"
                     }
                   },
-                  "Property": "Mes_Sales"
+                  "Property": "Mes_resellers"
                 }
               },
-              "queryRef": "Sales.Mes_Sales",
-              "nativeQueryRef": "Total Sales",
-              "displayName": "Total Sales"
-            }
-          ],
-          "fieldParameters": [
-            {
-              "parameterExpr": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "KPI Selector"
-                    }
-                  },
-                  "Property": "KPI Selector"
-                }
-              },
-              "index": 0,
-              "length": 1
+              "queryRef": "Sales.Mes_reseller",
+              "nativeQueryRef": "Total Resellers",
+              "displayName": "Total Resellers"
             }
           ]
         }
@@ -78,7 +62,7 @@
                     "Entity": "Sales"
                   }
                 },
-                "Property": "Mes_Sales"
+                "Property": "Mes_resellers"
               }
             },
             "direction": "Descending"
@@ -91,17 +75,50 @@
       "labels": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'outside'"
                 }
               }
             },
-            "labelStyle": {
+            "percentageLabelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, percent of total'"
+                  "Value": "1L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "startAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "innerRadiusRatio": {
+              "expr": {
+                "Literal": {
+                  "Value": "75L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -111,10 +128,10 @@
       "legend": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'RightCenter'"
                 }
               }
             }
@@ -133,22 +150,10 @@
                 }
               }
             },
-            "fontSize": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "KPI Selector"
-                    }
-                  },
-                  "Property": "Title KPI By Business Type"
+                  "Value": "false"
                 }
               }
             },
@@ -162,6 +167,13 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           }
         }
@@ -172,7 +184,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6fb014f944364e2a0219",
+        "name": "8b6d206d7d30bd034526",
         "field": {
           "Column": {
             "Expression": {
@@ -184,6 +196,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "51691e4576ba077d7d5d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "Mes_resellers"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

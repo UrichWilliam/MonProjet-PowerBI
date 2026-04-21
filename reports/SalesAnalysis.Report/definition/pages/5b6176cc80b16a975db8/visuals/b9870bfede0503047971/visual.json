@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8ee8b1f530b690435ca2",
+  "name": "b9870bfede0503047971",
   "position": {
-    "x": 971.39465875370911,
-    "y": 81.66172106824925,
-    "z": 34000,
-    "height": 176.61721068249255,
-    "width": 289.61424332344211,
-    "tabOrder": 34000
+    "x": 823.23215750615259,
+    "y": 373.8146021328958,
+    "z": 36000,
+    "height": 55.652173913043477,
+    "width": 148.05578342904019,
+    "tabOrder": 36000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Reseller"
-                    }
-                  },
-                  "Property": "Business Type"
-                }
-              },
-              "queryRef": "Reseller.Business Type",
-              "nativeQueryRef": "Business Type",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,28 +23,12 @@
                       "Entity": "Sales"
                     }
                   },
-                  "Property": "Mes_Sales"
+                  "Property": "Mes_resellers"
                 }
               },
-              "queryRef": "Sales.Mes_Sales",
-              "nativeQueryRef": "Total Sales",
-              "displayName": "Total Sales"
-            }
-          ],
-          "fieldParameters": [
-            {
-              "parameterExpr": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "KPI Selector"
-                    }
-                  },
-                  "Property": "KPI Selector"
-                }
-              },
-              "index": 0,
-              "length": 1
+              "queryRef": "Sales.Mes_reseller",
+              "nativeQueryRef": "Total Resellers",
+              "displayName": "Total Resellers"
             }
           ]
         }
@@ -78,7 +43,7 @@
                     "Entity": "Sales"
                   }
                 },
-                "Property": "Mes_Sales"
+                "Property": "Mes_resellers"
               }
             },
             "direction": "Descending"
@@ -88,33 +53,40 @@
       }
     },
     "objects": {
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Category, percent of total'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
+      "categoryLabels": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -133,6 +105,20 @@
                 }
               }
             },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Resellers'"
+                }
+              }
+            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -140,24 +126,40 @@
                 }
               }
             },
-            "text": {
+            "alignment": {
               "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "KPI Selector"
-                    }
-                  },
-                  "Property": "Title KPI By Business Type"
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
-            "fontColor": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#605E5C'"
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -172,18 +174,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6fb014f944364e2a0219",
+        "name": "02ede20d17e3c1a51ebb",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Reseller"
+                "Entity": "Sales"
               }
             },
-            "Property": "Business Type"
+            "Property": "Mes_resellers"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }

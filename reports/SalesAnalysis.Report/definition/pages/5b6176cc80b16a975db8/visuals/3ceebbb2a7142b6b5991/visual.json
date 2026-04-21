@@ -201,8 +201,13 @@
             },
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Total Sales By Country'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPI Selector"
+                    }
+                  },
+                  "Property": "Title KPI By Country"
                 }
               }
             }

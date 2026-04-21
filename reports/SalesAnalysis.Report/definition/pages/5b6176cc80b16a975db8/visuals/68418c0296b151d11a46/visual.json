@@ -26,8 +26,25 @@
                   "Property": "Mes_Sales"
                 }
               },
-              "queryRef": "Sales.Mes_Total_Sales",
-              "nativeQueryRef": "Mes_Sales"
+              "queryRef": "Sales.Mes_Sales",
+              "nativeQueryRef": "Total Sales",
+              "displayName": "Total Sales"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPI Selector"
+                    }
+                  },
+                  "Property": "KPI Selector"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         }

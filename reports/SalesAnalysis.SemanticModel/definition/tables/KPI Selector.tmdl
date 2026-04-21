@@ -7,7 +7,7 @@ table 'KPI Selector'
 		formatString: 0
 		lineageTag: bdc06e85-e361-4319-a90e-5197e420bc4c
 
-	measure 'Benchmark Title' = ```
+	measure 'Title Benchmark By Category' = ```
 			
 			[Selected KPI Label] & " Benchmark by Category"
 			
@@ -36,6 +36,18 @@ table 'KPI Selector'
 		lineageTag: a96e01d1-78e0-4f60-869d-c8cfbee35b97
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Title KPI By Month' = [Selected KPI Label] & " by Month"
+		lineageTag: c773c4ee-08d3-4502-a355-c742ae988b36
+
+	measure 'Title KPI By Country' = [Selected KPI Label] & " by Country"
+		lineageTag: b6dafc89-186c-4350-acb5-173a7d364e2b
+
+	measure 'Title KPI By Business Type' = [Selected KPI Label] & " by Business Type"
+		lineageTag: 9da46f9c-20d2-4bcf-9d03-985c37b1ecd6
+
+	measure 'Title KPI By Sales Representative' = [Selected KPI Label] & " by Sales Representative"
+		lineageTag: 43c64028-1e3d-4ac9-8978-c16b7aa37be9
 
 	column 'KPI Selector'
 		lineageTag: f3655026-cea6-42fb-8e9a-d2a5c2a7d0f5

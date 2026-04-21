@@ -316,6 +316,72 @@ table Sales
 		displayFolder: Profit
 		lineageTag: 94712b94-6f37-4064-b7cd-e1510e41c61b
 
+	measure Mes_employees = DISTINCTCOUNTNOBLANK(Sales[EmployeeKey])
+		formatString: 0
+		displayFolder: Employees
+		lineageTag: 2b37e4be-652a-44de-b518-75b9ebb5e8f5
+
+	measure Mes_resellers = DISTINCTCOUNTNOBLANK(Sales[ResellerKey])
+		formatString: 0
+		displayFolder: Resellers
+		lineageTag: 01cda30d-edaa-4173-95a8-6d9dade197ef
+
+	measure Mes_Products = COUNT(Sales[Quantity])
+		formatString: 0
+		displayFolder: Products
+		lineageTag: beb4c52a-a81f-489f-a691-2b9a1a9097ea
+
+	measure Mes_Salespersons = DISTINCTCOUNTNOBLANK('Salesperson (Performance)'[EmployeeID])
+		formatString: 0
+		displayFolder: Salesperson
+		lineageTag: 7f491d8f-adda-4498-96f8-26bb5bfcb017
+
+	measure 'Avg Deal Size' = DIVIDE([Mes_Sales], [Mes_Orders])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total
+		lineageTag: 28f8190c-3c96-4068-a258-d831eaa2947a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Profit Margin Tooltip' = ```
+			
+			IF(
+			    [Mes_Profit_Margin] < 0,
+			    "Negative margin indicates a shift from profit to loss vs previous year.",
+			    BLANK()
+			)
+			
+			```
+		displayFolder: Profit
+		lineageTag: 2a8c5358-5050-4f10-a795-e5f3c134ac38
+
+	measure 'Profit Variance' = ```
+			
+			[Mes_Profit] - [Mes_LY_Profit]
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Profit
+		lineageTag: 8574a51f-890d-42bc-81cb-c472b0f8052f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Profit Variance Label' =
+			
+			VAR pv = [Profit Variance]
+			RETURN
+			IF(
+			    ISBLANK(pv),
+			    BLANK(),
+			    IF(
+			        pv >= 0,
+			        "▲ " & FORMAT(pv/1000000, "0.00$") & " vs PY",
+			        "▼ " & FORMAT(ABS(pv)/1000000, "0.00$") & " vs PY"
+			    )
+			)
+		displayFolder: Profit
+		lineageTag: 4c2c74c8-2f79-4d7e-92f0-d17134c776ff
+
 	column SalesOrderNumber
 		dataType: string
 		isHidden

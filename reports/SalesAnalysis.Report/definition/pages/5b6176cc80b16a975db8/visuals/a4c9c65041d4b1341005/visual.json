@@ -286,5 +286,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0d6045b5216e0ed57cc8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI Selector"
+              }
+            },
+            "Property": "KPI Selector"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

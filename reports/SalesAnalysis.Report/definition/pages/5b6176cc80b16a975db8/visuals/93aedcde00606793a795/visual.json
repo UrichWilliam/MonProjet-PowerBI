@@ -27,8 +27,7 @@
                       "selector": {
                         "id": "Benchmak"
                       }
-                    },
-                    "textStyle": {}
+                    }
                   }
                 ]
               }
@@ -63,7 +62,7 @@
                                       "Source": "k"
                                     }
                                   },
-                                  "Property": "Benchmark Title"
+                                  "Property": "Title Benchmark By Category"
                                 },
                                 "Name": "KPI Selector.Benchmark Title"
                               }

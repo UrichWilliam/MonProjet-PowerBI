@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8b4fc8d4667c6d400c42",
+  "name": "e14b65e7e1c429880d4b",
   "position": {
-    "x": 450.44776119402985,
-    "y": 81.492537313432834,
-    "z": 22000,
-    "height": 51.940298507462686,
-    "width": 163.88059701492537,
-    "tabOrder": 22000
+    "x": 670.97621000820345,
+    "y": 373.8146021328958,
+    "z": 38001,
+    "height": 55.652173913043477,
+    "width": 148.05578342904019,
+    "tabOrder": 38001
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,12 @@
                       "Entity": "Sales"
                     }
                   },
-                  "Property": "Mes_Profit_Margin"
+                  "Property": "Mes_Salespersons"
                 }
               },
-              "queryRef": "Sales.Profit Margin",
-              "nativeQueryRef": "Mes_Profit_Margin"
+              "queryRef": "Sales.Mes_Salesperson",
+              "nativeQueryRef": "Total Salespersons",
+              "displayName": "Total Salespersons"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "Sales"
                   }
                 },
-                "Property": "Mes_Profit_Margin"
+                "Property": "Mes_Salespersons"
               }
             },
             "direction": "Descending"
@@ -55,6 +56,13 @@
       "categoryLabels": [
         {
           "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -72,6 +80,13 @@
               "expr": {
                 "Literal": {
                   "Value": "24D"
+                }
+              }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -93,21 +108,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Profit Margin'"
+                  "Value": "'Total Salesperson'"
                 }
               }
             },
-            "alignment": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "heading": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Heading2'"
+                  "Value": "false"
                 }
               }
             },
@@ -117,11 +125,54 @@
                   "Value": "12D"
                 }
               }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b42a8d997440090a10c6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "Mes_Salespersons"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

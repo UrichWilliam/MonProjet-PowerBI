@@ -1,0 +1,14 @@
+DEFINE
+	VAR __DS0FilterTable = 
+		TREATAS({"'Sales'[Mes_Sales]"}, 'KPI Selector'[KPI Selector Champs])
+
+	VAR __DS0FilterTable2 = 
+		TREATAS({"FY2020"}, 'Date'[Year])
+
+EVALUATE
+	SUMMARIZECOLUMNS(
+		__DS0FilterTable,
+		__DS0FilterTable2,
+		"Mes_Profit_Margin", IGNORE('Sales'[Mes_Profit_Margin]),
+		"Profit_Margin_Tooltip", IGNORE('Sales'[Profit Margin Tooltip])
+	)

@@ -230,34 +230,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "ed882e573160a789d18d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table"
-              }
-            },
-            "Property": "Mes_KPI_Remaining"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "de7a0a42b6ac009b38d9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sales"
-              }
-            },
-            "Property": "Mes_Sales"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

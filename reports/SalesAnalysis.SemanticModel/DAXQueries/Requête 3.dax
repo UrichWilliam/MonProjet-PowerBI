@@ -1,0 +1,30 @@
+DEFINE
+	VAR __DS0FilterTable = 
+		TREATAS({"'Sales'[Mes_Sales]"}, 'KPI Selector'[KPI Selector Champs])
+
+	VAR __DS0FilterTable2 = 
+		TREATAS({"FY2020"}, 'Date'[Year])
+
+	VAR __DS0Core = 
+		SUMMARIZECOLUMNS(
+			'Reseller'[Business Type],
+			__DS0FilterTable,
+			__DS0FilterTable2,
+			"Mes_Sales", 'Sales'[Mes_Sales]
+		)
+
+	VAR __DS0BodyLimited = 
+		TOPN(1002, __DS0Core, [Mes_Sales], 0, 'Reseller'[Business Type], 1)
+
+EVALUATE
+	SUMMARIZECOLUMNS(
+		__DS0FilterTable,
+		__DS0FilterTable2,
+		"Title_KPI_By_Business_Type", IGNORE('KPI Selector'[Title KPI By Business Type])
+	)
+
+EVALUATE
+	__DS0BodyLimited
+
+ORDER BY
+	[Mes_Sales] DESC, 'Reseller'[Business Type]

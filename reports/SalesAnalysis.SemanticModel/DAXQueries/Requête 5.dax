@@ -1,0 +1,30 @@
+DEFINE
+	VAR __DS0FilterTable = 
+		TREATAS({"'Sales'[Mes_Profit]"}, 'KPI Selector'[KPI Selector Champs])
+
+	VAR __DS0FilterTable2 = 
+		TREATAS({"FY2020"}, 'Date'[Year])
+
+	VAR __DS0Core = 
+		SUMMARIZECOLUMNS(
+			'Region'[Country],
+			__DS0FilterTable,
+			__DS0FilterTable2,
+			"Mes_Profit", 'Sales'[Mes_Profit]
+		)
+
+	VAR __DS0PrimaryWindowed = 
+		TOPN(1001, __DS0Core, [Mes_Profit], 0, 'Region'[Country], 1)
+
+EVALUATE
+	SUMMARIZECOLUMNS(
+		__DS0FilterTable,
+		__DS0FilterTable2,
+		"Title_KPI_By_Country", IGNORE('KPI Selector'[Title KPI By Country])
+	)
+
+EVALUATE
+	__DS0PrimaryWindowed
+
+ORDER BY
+	[Mes_Profit] DESC, 'Region'[Country]
