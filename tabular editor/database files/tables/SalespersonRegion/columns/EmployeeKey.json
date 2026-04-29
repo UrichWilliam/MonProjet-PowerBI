@@ -1,0 +1,20 @@
+{
+  "name": "EmployeeKey",
+  "dataType": "int64",
+  "isHidden": true,
+  "sourceColumn": "EmployeeKey",
+  "formatString": "0",
+  "lineageTag": "8ab8ec41-c04d-4740-ac69-a93e839b2433",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

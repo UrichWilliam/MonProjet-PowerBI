@@ -1,0 +1,7 @@
+{
+  "name": "Mes_resellers",
+  "expression": "DISTINCTCOUNTNOBLANK(Sales[ResellerKey])",
+  "formatString": "0",
+  "displayFolder": "Resellers",
+  "lineageTag": "01cda30d-edaa-4173-95a8-6d9dade197ef"
+}

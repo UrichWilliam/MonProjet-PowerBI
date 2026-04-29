@@ -1,0 +1,18 @@
+{
+  "name": "Reseller",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(SQLInstance, Database),",
+      "    dbo_DimReseller = Source{[Schema=\"dbo\",Item=\"DimReseller\"]}[Data],",
+      "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_DimReseller,{\"ResellerKey\", \"BusinessType\", \"ResellerName\", \"DimGeography\"}),",
+      "    #\"Expanded DimGeography\" = Table.ExpandRecordColumn(#\"Removed Other Columns\", \"DimGeography\", {\"City\", \"StateProvinceName\", \"EnglishCountryRegionName\"}, {\"City\", \"StateProvinceName\", \"EnglishCountryRegionName\"}),",
+      "    #\"Replaced Value\" = Table.ReplaceValue(#\"Expanded DimGeography\",\"Ware House\",\"Warehouse\",Replacer.ReplaceText,{\"BusinessType\"}),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Replaced Value\",{{\"BusinessType\", \"Business Type\"}, {\"ResellerName\", \"Reseller\"}, {\"StateProvinceName\", \"State-Province\"}, {\"EnglishCountryRegionName\", \"Country-Region\"}})",
+      "in",
+      "    #\"Renamed Columns\""
+    ]
+  }
+}

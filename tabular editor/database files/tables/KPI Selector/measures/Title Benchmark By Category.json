@@ -1,0 +1,9 @@
+{
+  "name": "Title Benchmark By Category",
+  "expression": [
+    "",
+    "[Selected KPI Label] & \" Benchmark by Category\"",
+    ""
+  ],
+  "lineageTag": "814a0491-38d7-40cb-9f1e-ad9a680184b0"
+}

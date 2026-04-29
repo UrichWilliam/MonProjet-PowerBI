@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 340"
+  width="800"
+  height="340"
+  role="img"
+  aria-label="Datafarm Intelligence Logo">
+
+  <title>Datafarm Intelligence</title>
+  <desc>Datafarm Intelligence — BI · Data Science · Governance</desc>
+
+  <!-- White background -->
+  <rect width="800" height="340" fill="#ffffff"/>
+
+  <!-- ══ MOLECULE ICON ══ -->
+  <g transform="translate(175,170)">
+
+    <!-- Secondary bonds between atoms -->
+    <line x1="68" y1="-40" x2="-68" y2="-40" stroke="#9FE1CB" stroke-width="1.2" opacity="0.45"/>
+    <line x1="68" y1="-40" x2="68" y2="40" stroke="#9FE1CB" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-68" y1="-40" x2="-68" y2="40" stroke="#9FE1CB" stroke-width="1.2" opacity="0.45"/>
+    <line x1="68" y1="40" x2="0" y2="68" stroke="#9FE1CB" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-68" y1="40" x2="0" y2="68" stroke="#9FE1CB" stroke-width="1.2" opacity="0.45"/>
+
+    <!-- Primary bonds -->
+    <line x1="0" y1="0" x2="68" y2="-40" stroke="#0F6E56" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="-68" y2="-40" stroke="#0F6E56" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#0F6E56" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="68" y2="40" stroke="#1D9E75" stroke-width="1.6" opacity="0.65"/>
+    <line x1="0" y1="0" x2="-68" y2="40" stroke="#1D9E75" stroke-width="1.6" opacity="0.65"/>
+
+    <!-- Large atoms -->
+    <circle cx="68" cy="-40" r="22" fill="#1D9E75"/>
+    <circle cx="-68" cy="-40" r="22" fill="#1D9E75"/>
+    <circle cx="0" cy="68" r="22" fill="#0F6E56"/>
+
+    <!-- Small atoms -->
+    <circle cx="68" cy="40" r="15" fill="#9FE1CB"/>
+    <circle cx="-68" cy="40" r="15" fill="#9FE1CB"/>
+
+    <!-- Amber accents -->
+    <circle cx="68" cy="-40" r="8" fill="#FAC775"/>
+    <circle cx="-68" cy="-40" r="8" fill="#FAC775"/>
+    <circle cx="0" cy="68" r="8" fill="#EF9F27"/>
+
+    <!-- Central atom -->
+    <circle cx="0" cy="0" r="34" fill="#085041"/>
+    <circle cx="0" cy="0" r="13" fill="#FAC775"/>
+
+  </g>
+
+  <!-- Vertical separator -->
+  <line x1="316" y1="55" x2="316" y2="285" stroke="#9FE1CB" stroke-width="1"/>
+
+  <!-- ══ TEXT ══ -->
+  <!-- DATAFARM -->
+  <text
+    x="342"
+    y="128"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="38"
+    font-weight="700"
+    letter-spacing="3"
+    fill="#085041">DATAFARM</text>
+
+  <!-- INTELLIGENCE -->
+  <text
+    x="344"
+    y="167"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="21"
+    font-weight="400"
+    letter-spacing="7"
+    fill="#1D9E75">INTELLIGENCE</text>
+
+  <!-- Divider line -->
+  <line x1="342" y1="184" x2="776" y2="184" stroke="#9FE1CB" stroke-width="0.9"/>
+
+  <!-- Services -->
+  <text
+    x="343"
+    y="207"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12"
+    font-weight="500"
+    letter-spacing="3"
+    fill="#0F6E56">BI · DATA SCIENCE · GOVERNANCE</text>
+
+  <!-- Tagline -->
+  <text
+    x="343"
+    y="238"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13"
+    font-weight="300"
+    letter-spacing="1.2"
+    fill="#7A7A78">Decisions powered by data</text>
+
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "Mes_Cost",
+  "expression": "SUM(Sales[Cost])",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "displayFolder": "Total",
+  "lineageTag": "773ef9df-9873-4374-956d-2dc63d431e88",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

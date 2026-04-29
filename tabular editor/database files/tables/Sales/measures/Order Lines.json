@@ -1,0 +1,10 @@
+{
+  "name": "Order Lines",
+  "expression": [
+    "",
+    "COUNTROWS(Sales)"
+  ],
+  "formatString": "#,0",
+  "displayFolder": "Order",
+  "lineageTag": "8ba76031-b2f7-488d-849e-afee0cfbde36"
+}

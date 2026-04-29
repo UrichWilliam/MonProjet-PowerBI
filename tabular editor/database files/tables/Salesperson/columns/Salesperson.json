@@ -1,0 +1,16 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "Salesperson",
+  "dataType": "string",
+  "isNameInferred": true,
+  "isDataTypeInferred": true,
+  "sourceColumn": "Salesperson (Performance)[Salesperson]",
+  "lineageTag": "ceb09511-d151-4b3d-82b7-c604457fda43",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

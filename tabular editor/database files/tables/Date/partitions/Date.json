@@ -1,0 +1,11 @@
+{
+  "name": "Date",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": [
+      "",
+      "CALENDARAUTO(6)"
+    ]
+  }
+}

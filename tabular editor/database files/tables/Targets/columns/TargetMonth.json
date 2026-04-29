@@ -1,0 +1,24 @@
+{
+  "name": "TargetMonth",
+  "dataType": "dateTime",
+  "isHidden": true,
+  "sourceColumn": "TargetMonth",
+  "formatString": "Long Date",
+  "lineageTag": "68de4399-a6d7-4f91-9bbb-c07d085ca6c1",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "UnderlyingDateTimeDataType",
+      "value": "Date"
+    }
+  ]
+}

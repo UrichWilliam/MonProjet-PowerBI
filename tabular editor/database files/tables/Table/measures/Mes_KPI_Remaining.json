@@ -1,0 +1,30 @@
+{
+  "name": "Mes_KPI_Remaining",
+  "expression": [
+    "",
+    "    --[Mes_KPI_Max] - [Mes_Sales]",
+    "    --[Mes_KPI_Max] - SELECTEDMEASURE()",
+    "",
+    "    VAR Selected_KPI_Value =",
+    "        SWITCH (",
+    "            [Selected KPI Number],",
+    "            0, [Mes_Sales],",
+    "            1, [Mes_Profit],",
+    "            2, [Mes_Profit_Margin],",
+    "            3, [Mes_Orders]",
+    "        )",
+    "    RETURN",
+    "        [Mes_KPI_Max] - Selected_KPI_Value",
+    "",
+    "    ",
+    ""
+  ],
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "bb9dd474-c256-4d4c-9a11-f85d06526a44",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

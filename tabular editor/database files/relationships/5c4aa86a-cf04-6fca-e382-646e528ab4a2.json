@@ -1,0 +1,9 @@
+{
+  "name": "5c4aa86a-cf04-6fca-e382-646e528ab4a2",
+  "fromTable": "SalespersonRegion",
+  "fromColumn": "SalesTerritoryKey",
+  "toTable": "Region",
+  "toColumn": "SalesTerritoryKey",
+  "crossFilteringBehavior": "bothDirections",
+  "securityFilteringBehavior": "bothDirections"
+}

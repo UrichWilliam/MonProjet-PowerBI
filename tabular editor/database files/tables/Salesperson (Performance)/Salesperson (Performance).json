@@ -1,0 +1,20 @@
+{
+  "name": "Salesperson (Performance)",
+  "description": "Salesperson related to region(s)",
+  "lineageTag": "30cafbe7-1db4-40f7-a023-2211b63f024f",
+  "changedProperties": [
+    {
+      "property": "Name"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    },
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Background Color Format",
+  "dataType": "string",
+  "sourceColumn": "Background Color Format",
+  "displayFolder": "Formatting",
+  "lineageTag": "4ee84a8b-24bc-4222-99a8-edd95f508a5c",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

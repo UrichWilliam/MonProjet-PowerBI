@@ -1,0 +1,18 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "KPI Selector Commande",
+  "dataType": "int64",
+  "isNameInferred": false,
+  "isDataTypeInferred": true,
+  "isHidden": true,
+  "sourceColumn": "[Value3]",
+  "formatString": "0",
+  "lineageTag": "ce3e6088-d129-41f1-9f68-28fadbcec9bb",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

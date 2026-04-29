@@ -1,0 +1,8 @@
+
+{
+  "servers": {
+    "powerbi-tools": {
+      "command": ["python", ".mcp/servers/powerbi-tools/server.py"]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "1f4b7afd-5cf4-d2e5-afb5-c2cbb43fc255",
+  "fromTable": "Targets",
+  "fromColumn": "TargetMonth",
+  "toTable": "Date",
+  "toColumn": "Date"
+}

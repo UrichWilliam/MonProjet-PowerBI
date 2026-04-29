@@ -1,0 +1,10 @@
+{
+  "name": "Mes_LY_Profit_Margin",
+  "expression": [
+    "",
+    "DIVIDE( [Mes_LY_Profit], [Mes_LY_Sales])"
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Profit",
+  "lineageTag": "d66fd80b-b6b2-47ca-aa83-e34c78721a52"
+}

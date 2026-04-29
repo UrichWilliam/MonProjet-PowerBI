@@ -1,0 +1,25 @@
+{
+  "name": "Mes_Profit_Margin",
+  "expression": [
+    "",
+    "DIVIDE([Mes_Profit], [Mes_Sales])"
+  ],
+  "formatString": "#,0.00%;-#,0.00%;#,0.00%",
+  "displayFolder": "Profit",
+  "lineageTag": "ee424faf-c9bf-4309-a6b4-088258944206",
+  "extendedProperties": [
+    {
+      "type": "json",
+      "name": "MeasureTemplate",
+      "value": {
+        "version": 0,
+        "daxTemplateName": "MathematicalDivision"
+      }
+    }
+  ],
+  "changedProperties": [
+    {
+      "property": "FormatString"
+    }
+  ]
+}

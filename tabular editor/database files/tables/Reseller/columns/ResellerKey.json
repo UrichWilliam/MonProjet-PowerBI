@@ -1,0 +1,20 @@
+{
+  "name": "ResellerKey",
+  "dataType": "int64",
+  "isHidden": true,
+  "sourceColumn": "ResellerKey",
+  "formatString": "0",
+  "lineageTag": "6e7e9057-9f99-4e3d-b97a-8f1971657186",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

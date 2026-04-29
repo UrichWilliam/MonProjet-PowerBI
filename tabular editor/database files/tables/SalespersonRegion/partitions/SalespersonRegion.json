@@ -1,0 +1,15 @@
+{
+  "name": "SalespersonRegion",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(SQLInstance, Database),",
+      "    dbo_DimEmployeeSalesTerritory = Source{[Schema=\"dbo\",Item=\"DimEmployeeSalesTerritory\"]}[Data],",
+      "    #\"Removed Columns\" = Table.RemoveColumns(dbo_DimEmployeeSalesTerritory,{\"DimEmployee\", \"DimSalesTerritory\"})",
+      "in",
+      "    #\"Removed Columns\""
+    ]
+  }
+}

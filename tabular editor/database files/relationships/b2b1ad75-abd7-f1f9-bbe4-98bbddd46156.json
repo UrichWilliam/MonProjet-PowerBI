@@ -1,0 +1,7 @@
+{
+  "name": "b2b1ad75-abd7-f1f9-bbe4-98bbddd46156",
+  "fromTable": "Sales",
+  "fromColumn": "EmployeeKey",
+  "toTable": "Salesperson",
+  "toColumn": "EmployeeKey"
+}

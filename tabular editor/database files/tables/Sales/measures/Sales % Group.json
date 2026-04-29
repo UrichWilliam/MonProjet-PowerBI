@@ -1,0 +1,23 @@
+{
+  "name": "Sales % Group",
+  "expression": [
+    "",
+    "IF(",
+    "\tISINSCOPE(Region[Region])",
+    "\t\t|| ISINSCOPE(Region[Country]),",
+    "\tDIVIDE(",
+    "\t\tSUM(Sales[Sales]),",
+    "\t\tCALCULATE(",
+    "\t\t\tSUM(Sales[Sales]),",
+    "\t\t\tREMOVEFILTERS(",
+    "\t\t\t\tRegion[Region],",
+    "\t\t\t\tRegion[Country]",
+    "\t\t\t)",
+    "\t\t)",
+    "\t)",
+    ")"
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Ratios",
+  "lineageTag": "7f1dad48-8df8-4bf4-8316-7a6126408e1d"
+}

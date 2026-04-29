@@ -1,0 +1,7 @@
+{
+  "name": "Mes_Salespersons",
+  "expression": "DISTINCTCOUNTNOBLANK('Salesperson (Performance)'[EmployeeID])",
+  "formatString": "0",
+  "displayFolder": "Salesperson",
+  "lineageTag": "7f491d8f-adda-4498-96f8-26bb5bfcb017"
+}

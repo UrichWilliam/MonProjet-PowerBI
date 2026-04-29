@@ -1,0 +1,5 @@
+{
+  "name": "Title KPI By Month",
+  "expression": "[Selected KPI Label] & \" by Month\"",
+  "lineageTag": "c773c4ee-08d3-4502-a355-c742ae988b36"
+}

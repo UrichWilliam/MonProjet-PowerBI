@@ -1,0 +1,14 @@
+{
+  "name": "Font Color Format",
+  "dataType": "string",
+  "sourceColumn": "Font Color Format",
+  "displayFolder": "Formatting",
+  "lineageTag": "c45bccf0-8553-4d22-8593-e62f9b75f558",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

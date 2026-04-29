@@ -1,0 +1,7 @@
+{
+  "name": "4f52607c-3a9c-3948-ed90-0b8083acef40",
+  "fromTable": "Targets",
+  "fromColumn": "EmployeeID",
+  "toTable": "Salesperson (Performance)",
+  "toColumn": "EmployeeID"
+}

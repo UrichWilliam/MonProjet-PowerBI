@@ -1,0 +1,9 @@
+{
+  "name": "Selected KPI Number",
+  "expression": [
+    "",
+    "SELECTEDVALUE('KPI Selector'[KPI Selector Commande])"
+  ],
+  "formatString": "0",
+  "lineageTag": "bdc06e85-e361-4319-a90e-5197e420bc4c"
+}

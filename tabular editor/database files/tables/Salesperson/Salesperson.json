@@ -1,0 +1,11 @@
+{
+  "name": "Salesperson",
+  "description": "Salesperson related to sales",
+  "lineageTag": "1f3a4a43-ee11-4de9-84ee-48d981c2f75f",
+  "annotations": [
+    {
+      "name": "PBI_Id",
+      "value": "740d2bb5f18e41b689cdd87d80916925"
+    }
+  ]
+}

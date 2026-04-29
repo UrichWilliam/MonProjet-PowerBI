@@ -1,0 +1,8 @@
+{
+  "name": "Table",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": "Row(\"Column\", BLANK())"
+  }
+}

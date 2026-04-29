@@ -1,0 +1,16 @@
+{
+  "name": "Max Price",
+  "expression": [
+    "",
+    "MAX(Sales[Unit Price])"
+  ],
+  "formatString": "\\$#,0.00;-\\$#,0.00;\\$#,0.00",
+  "displayFolder": "Pricing",
+  "lineageTag": "10f2ab7f-ce1b-43cb-ade9-42967a141631",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}

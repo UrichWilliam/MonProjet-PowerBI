@@ -1,0 +1,13 @@
+{
+  "name": "Mes_LY_Orders",
+  "expression": [
+    "",
+    "    CALCULATE(",
+    "        DISTINCTCOUNT(Sales[SalesOrderNumber]),",
+    "        SAMEPERIODLASTYEAR('Date'[Date])",
+    "    )"
+  ],
+  "formatString": "0",
+  "displayFolder": "Order",
+  "lineageTag": "830cba03-804b-4289-b119-62aa656eb25f"
+}

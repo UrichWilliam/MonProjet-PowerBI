@@ -1,0 +1,30 @@
+{
+  "name": "Geography",
+  "lineageTag": "736e19d0-9804-41fa-b21b-15c9b718acf2",
+  "levels": [
+    {
+      "name": "Country-Region",
+      "ordinal": 0,
+      "column": "Country-Region",
+      "lineageTag": "8ed792f7-334a-4dbb-838f-4de24adacb6f"
+    },
+    {
+      "name": "State-Province",
+      "ordinal": 1,
+      "column": "State-Province",
+      "lineageTag": "da5d42ce-9488-42cd-8d77-769d1c110cb7"
+    },
+    {
+      "name": "City",
+      "ordinal": 2,
+      "column": "City",
+      "lineageTag": "2d1ad35f-d207-4471-b171-b8c9719e61c3"
+    },
+    {
+      "name": "Reseller",
+      "ordinal": 3,
+      "column": "Reseller",
+      "lineageTag": "f97984a4-d7ca-4b66-9684-428bdca49808"
+    }
+  ]
+}

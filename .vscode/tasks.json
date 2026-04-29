@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Générer diagrammes Mermaid",
+      "type": "shell",
+      "command": "python",
+      "args": ["${workspaceFolder}/scripts/generate_mermaid.py"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "Générer + Ouvrir preview",
+      "dependsOn": ["Générer diagrammes Mermaid"],
+      "type": "shell",
+      "command": "code",
+      "args": ["${workspaceFolder}/docs/model-diagram.md"],
+      "problemMatcher": []
+    }
+  ]
+}

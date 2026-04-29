@@ -1,0 +1,24 @@
+{
+  "name": "Fiscal",
+  "lineageTag": "38e8b639-d048-45e2-976b-5375b7f5068a",
+  "levels": [
+    {
+      "name": "Year",
+      "ordinal": 0,
+      "column": "Year",
+      "lineageTag": "26f25a51-cd66-4324-9732-ebcd6fbe7e13"
+    },
+    {
+      "name": "Quarter",
+      "ordinal": 1,
+      "column": "Quarter",
+      "lineageTag": "ced52b68-9d93-4356-b0a9-054a0c7d8736"
+    },
+    {
+      "name": "Month",
+      "ordinal": 2,
+      "column": "Month",
+      "lineageTag": "431d1609-a2f5-4919-b8f5-b5c4596aca82"
+    }
+  ]
+}

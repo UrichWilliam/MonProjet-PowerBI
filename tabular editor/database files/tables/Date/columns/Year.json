@@ -1,0 +1,18 @@
+{
+  "type": "calculated",
+  "name": "Year",
+  "dataType": "string",
+  "isDataTypeInferred": true,
+  "expression": [
+    "",
+    "\"FY\" & YEAR('Date'[Date]) + IF(MONTH('Date'[Date]) > 6, 1)"
+  ],
+  "lineageTag": "5d99419b-f323-4d0c-be07-34a1e5fa3fd3",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

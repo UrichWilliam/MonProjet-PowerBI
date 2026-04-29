@@ -1,0 +1,14 @@
+{
+  "name": "Sales",
+  "dataType": "decimal",
+  "sourceColumn": "Sales",
+  "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+  "lineageTag": "4465de7d-4f58-462b-8ddb-6207fcce0d92",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

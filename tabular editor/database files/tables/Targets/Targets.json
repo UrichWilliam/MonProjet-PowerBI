@@ -1,0 +1,14 @@
+{
+  "name": "Targets",
+  "lineageTag": "fc05aa02-32da-45a3-a497-78e97999d244",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    }
+  ]
+}

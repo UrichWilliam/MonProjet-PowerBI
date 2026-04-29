@@ -1,0 +1,25 @@
+{
+  "name": "Targets",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/Main/Allfiles/Resources/ResellerSalesTargets.csv\"),[Delimiter=\",\", Columns=14, Encoding=1200, QuoteStyle=QuoteStyle.None]),",
+      "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+      "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Year\", Int64.Type}, {\"EmployeeID\", Int64.Type}, {\"M01\", type text}, {\"M02\", type text}, {\"M03\", type text}, {\"M04\", type text}, {\"M05\", type text}, {\"M06\", type text}, {\"M07\", type text}, {\"M08\", type text}, {\"M09\", type text}, {\"M10\", type text}, {\"M11\", type text}, {\"M12\", type text}}),",
+      "    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Changed Type\", {\"Year\", \"EmployeeID\"}, \"Attribute\", \"Value\"),",
+      "    #\"Filtered Rows\" = Table.SelectRows(#\"Unpivoted Other Columns\", each ([Value] <> \"-\")),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows\",{{\"Attribute\", \"MonthNumber\"}, {\"Value\", \"Target\"}}),",
+      "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"M\",\"\",Replacer.ReplaceText,{\"MonthNumber\"}),",
+      "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"MonthNumber\", Int64.Type}}),",
+      "    #\"Inserted Merged Column\" = Table.AddColumn(#\"Changed Type1\", \"TargetMonth\", each Text.Combine({Text.From([MonthNumber], \"en-US\"), \"/1/\", Text.From([Year], \"en-US\")}), type text),",
+      "    #\"Removed Columns\" = Table.RemoveColumns(#\"Inserted Merged Column\",{\"Year\", \"MonthNumber\"}),",
+      "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Removed Columns\",{{\"Target\", Currency.Type}, {\"TargetMonth\", type date}}),",
+      "    #\"Multiplied Column\" = Table.TransformColumns(#\"Changed Type2\", {{\"Target\", each _ * 1000, Currency.Type}}),",
+      "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Multiplied Column\",{{\"Target\", \"TargetAmount\"}})",
+      "in",
+      "    #\"Renamed Columns1\""
+    ]
+  }
+}

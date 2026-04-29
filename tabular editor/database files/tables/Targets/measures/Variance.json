@@ -1,0 +1,18 @@
+{
+  "name": "Variance",
+  "expression": [
+    "",
+    "IF(",
+    "\tHASONEVALUE('Salesperson (Performance)'[Salesperson]),",
+    "\tSUM(Sales[Sales]) - [Target]",
+    ")"
+  ],
+  "formatString": "\\$#,0;-\\$#,0;\\$#,0",
+  "lineageTag": "e6d05981-0f46-48d0-9e79-a63485d3f00c",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}

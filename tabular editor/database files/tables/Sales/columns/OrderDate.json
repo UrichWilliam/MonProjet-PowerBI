@@ -1,0 +1,24 @@
+{
+  "name": "OrderDate",
+  "dataType": "dateTime",
+  "isHidden": true,
+  "sourceColumn": "OrderDate",
+  "formatString": "Long Date",
+  "lineageTag": "f09e25ae-d1b9-4233-80a0-f947efe49834",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "UnderlyingDateTimeDataType",
+      "value": "Date"
+    }
+  ]
+}

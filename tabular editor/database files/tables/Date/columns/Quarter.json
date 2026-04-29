@@ -1,0 +1,31 @@
+{
+  "type": "calculated",
+  "name": "Quarter",
+  "dataType": "string",
+  "isDataTypeInferred": true,
+  "expression": [
+    "",
+    "'Date'[Year] & \" Q\"",
+    "    & IF(",
+    "        MONTH('Date'[Date]) <= 3,",
+    "        3,",
+    "        IF(",
+    "            MONTH('Date'[Date]) <= 6,",
+    "            4,",
+    "            IF(",
+    "                MONTH('Date'[Date]) <= 9,",
+    "                1,",
+    "                2",
+    "            )",
+    "        )",
+    "    )"
+  ],
+  "lineageTag": "3eab19e7-880f-4199-bd8f-a758739e4468",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Standard Cost",
+  "dataType": "decimal",
+  "sourceColumn": "Standard Cost",
+  "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+  "lineageTag": "75a01e1a-9dea-46b0-aca4-02d9fa627859",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

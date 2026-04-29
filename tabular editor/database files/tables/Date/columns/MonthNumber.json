@@ -1,0 +1,16 @@
+{
+  "type": "calculated",
+  "name": "MonthNumber",
+  "dataType": "int64",
+  "isDataTypeInferred": true,
+  "expression": "MONTH('Date'[Date])",
+  "formatString": "0",
+  "lineageTag": "d3f7e20a-a57c-4cc8-9854-f26742d8e0cf",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

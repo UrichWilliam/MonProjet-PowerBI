@@ -1,0 +1,24 @@
+{
+  "name": "Regions",
+  "lineageTag": "625346fc-db8a-42e9-afb5-a3d03efc042b",
+  "levels": [
+    {
+      "name": "Group",
+      "ordinal": 0,
+      "column": "Group",
+      "lineageTag": "2874eda0-6bcd-47a5-b757-9196af99b003"
+    },
+    {
+      "name": "Country",
+      "ordinal": 1,
+      "column": "Country",
+      "lineageTag": "6d61a6aa-6490-4cdb-ba70-622343adcbbc"
+    },
+    {
+      "name": "Region",
+      "ordinal": 2,
+      "column": "Region",
+      "lineageTag": "33d0d7e7-ae18-42df-a9ad-201045d0e0f0"
+    }
+  ]
+}

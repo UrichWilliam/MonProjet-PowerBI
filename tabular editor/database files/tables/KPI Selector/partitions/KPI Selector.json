@@ -1,0 +1,15 @@
+{
+  "name": "KPI Selector",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": [
+      "{",
+      "    (\"Total Sales\", NAMEOF('Sales'[Mes_Sales]), 0),",
+      "    (\"Total Profit\", NAMEOF('Sales'[Mes_Profit]), 1),",
+      "    (\"Profit Margin\", NAMEOF('Sales'[Mes_Profit_Margin]), 2),",
+      "    (\"Orders\", NAMEOF('Sales'[Mes_Orders]), 3)",
+      "}"
+    ]
+  }
+}
