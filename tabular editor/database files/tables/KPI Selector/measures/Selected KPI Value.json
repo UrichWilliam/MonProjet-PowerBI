@@ -1,0 +1,8 @@
+{
+  "name": "Selected KPI Value",
+  "expression": [
+    "",
+    "SELECTEDVALUE('KPI Selector'[KPI Selector Champs])"
+  ],
+  "lineageTag": "73b97815-6850-4d83-a4eb-2601c5eb3efe"
+}

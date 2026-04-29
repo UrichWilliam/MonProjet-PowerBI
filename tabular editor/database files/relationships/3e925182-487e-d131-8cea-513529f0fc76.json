@@ -1,0 +1,7 @@
+{
+  "name": "3e925182-487e-d131-8cea-513529f0fc76",
+  "fromTable": "Sales",
+  "fromColumn": "ResellerKey",
+  "toTable": "Reseller",
+  "toColumn": "ResellerKey"
+}

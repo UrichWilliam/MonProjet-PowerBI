@@ -1,0 +1,16 @@
+{
+  "name": "Avg Price",
+  "expression": [
+    "",
+    "AVERAGE(Sales[Unit Price])"
+  ],
+  "formatString": "\\$#,0.00;-\\$#,0.00;\\$#,0.00",
+  "displayFolder": "Pricing",
+  "lineageTag": "06235fe0-ec6b-4480-9601-0b20fca1eaa3",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}

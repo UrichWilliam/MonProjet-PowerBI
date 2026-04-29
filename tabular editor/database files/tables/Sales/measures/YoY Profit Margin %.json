@@ -1,0 +1,13 @@
+{
+  "name": "YoY Profit Margin %",
+  "expression": [
+    "",
+    "    DIVIDE(",
+    "        [Mes_Profit_Margin] - [Mes_LY_Profit_Margin], ",
+    "        ABS([Mes_LY_Profit_Margin])",
+    "    )"
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Profit",
+  "lineageTag": "f8ac991d-6a66-453d-a873-114209642038"
+}

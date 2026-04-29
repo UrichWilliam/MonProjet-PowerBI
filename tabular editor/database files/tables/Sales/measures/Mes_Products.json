@@ -1,0 +1,7 @@
+{
+  "name": "Mes_Products",
+  "expression": "COUNT(Sales[Quantity])",
+  "formatString": "0",
+  "displayFolder": "Products",
+  "lineageTag": "beb4c52a-a81f-489f-a691-2b9a1a9097ea"
+}

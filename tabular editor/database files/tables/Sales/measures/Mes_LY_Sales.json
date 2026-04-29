@@ -1,0 +1,19 @@
+{
+  "name": "Mes_LY_Sales",
+  "expression": [
+    "",
+    "    CALCULATE(",
+    "        SUM(Sales[Sales]),",
+    "        SAMEPERIODLASTYEAR('Date'[Date])",
+    "    )"
+  ],
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "displayFolder": "Total",
+  "lineageTag": "6e656032-3932-4c57-97cf-06dc608a370b",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

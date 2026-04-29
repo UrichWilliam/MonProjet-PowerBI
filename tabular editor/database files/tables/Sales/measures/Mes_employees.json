@@ -1,0 +1,7 @@
+{
+  "name": "Mes_employees",
+  "expression": "DISTINCTCOUNTNOBLANK(Sales[EmployeeKey])",
+  "formatString": "0",
+  "displayFolder": "Employees",
+  "lineageTag": "2b37e4be-652a-44de-b518-75b9ebb5e8f5"
+}

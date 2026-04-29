@@ -1,0 +1,19 @@
+{
+  "name": "UPN",
+  "dataType": "string",
+  "isHidden": true,
+  "sourceColumn": "UPN",
+  "lineageTag": "b7627f0f-d6d9-4bcf-9d3c-dacff4ec08af",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

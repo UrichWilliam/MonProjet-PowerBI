@@ -1,0 +1,25 @@
+{
+  "name": "Mes_Profit",
+  "expression": [
+    "",
+    "[Mes_Sales] - [Mes_Cost]"
+  ],
+  "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+  "displayFolder": "Profit",
+  "lineageTag": "cb608a6f-59ce-4595-a7a2-65dad7020149",
+  "extendedProperties": [
+    {
+      "type": "json",
+      "name": "MeasureTemplate",
+      "value": {
+        "version": 0,
+        "daxTemplateName": "MathematicalSubtraction"
+      }
+    }
+  ],
+  "changedProperties": [
+    {
+      "property": "FormatString"
+    }
+  ]
+}

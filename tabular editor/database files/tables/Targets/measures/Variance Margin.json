@@ -1,0 +1,9 @@
+{
+  "name": "Variance Margin",
+  "expression": [
+    "",
+    "DIVIDE([Variance], [Target])"
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "lineageTag": "0a85a582-ae44-4cf0-8b5a-67500d460a24"
+}

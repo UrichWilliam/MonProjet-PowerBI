@@ -1,0 +1,14 @@
+{
+  "name": "YoY Profit %",
+  "expression": [
+    "",
+    "DIVIDE(",
+    "    [Mes_Profit]- [Mes_LY_Profit],",
+    "    [Mes_LY_Profit]",
+    ")",
+    ""
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Profit",
+  "lineageTag": "3782ad12-b43d-4ca0-94ef-a2744cb0044f"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Avg Deal Size",
+  "expression": "DIVIDE([Mes_Sales], [Mes_Orders])",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "displayFolder": "Total",
+  "lineageTag": "28f8190c-3c96-4068-a258-d831eaa2947a",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

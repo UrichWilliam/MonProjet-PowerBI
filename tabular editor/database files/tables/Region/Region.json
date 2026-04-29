@@ -1,0 +1,14 @@
+{
+  "name": "Region",
+  "lineageTag": "5f6774b0-7a2d-4c98-a680-f126af8c7e5c",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    },
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "calculated",
+  "name": "MonthName",
+  "dataType": "string",
+  "isDataTypeInferred": true,
+  "expression": "FORMAT('Date'[Date], \"MMM\")",
+  "sortByColumn": "MonthNumber",
+  "lineageTag": "3f856b29-debf-451b-aba7-ac86e22d591f",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

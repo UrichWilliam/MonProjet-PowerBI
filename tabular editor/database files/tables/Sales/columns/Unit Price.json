@@ -1,0 +1,20 @@
+{
+  "name": "Unit Price",
+  "dataType": "decimal",
+  "isHidden": true,
+  "sourceColumn": "Unit Price",
+  "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+  "lineageTag": "914c5056-0675-4279-90b9-9b47f4096186",
+  "summarizeBy": "average",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "User"
+    }
+  ]
+}

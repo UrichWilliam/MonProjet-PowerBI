@@ -1,0 +1,22 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "EmployeeKey",
+  "dataType": "int64",
+  "isNameInferred": true,
+  "isDataTypeInferred": true,
+  "description": [
+    "Salesperson related to Sales",
+    ""
+  ],
+  "isHidden": true,
+  "sourceColumn": "Salesperson (Performance)[EmployeeKey]",
+  "formatString": "0",
+  "lineageTag": "d26a1ce7-a18c-46d2-b39f-eba9f4d49bab",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

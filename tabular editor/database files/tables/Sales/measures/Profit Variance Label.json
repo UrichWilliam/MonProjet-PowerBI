@@ -1,0 +1,19 @@
+{
+  "name": "Profit Variance Label",
+  "expression": [
+    "",
+    "VAR pv = [Profit Variance]",
+    "RETURN",
+    "IF(",
+    "    ISBLANK(pv),",
+    "    BLANK(),",
+    "    IF(",
+    "        pv >= 0,",
+    "        \"▲ \" & FORMAT(pv/1000000, \"0.00$\") & \" vs PY\",",
+    "        \"▼ \" & FORMAT(ABS(pv)/1000000, \"0.00$\") & \" vs PY\"",
+    "    )",
+    ")"
+  ],
+  "displayFolder": "Profit",
+  "lineageTag": "4c2c74c8-2f79-4d7e-92f0-d17134c776ff"
+}

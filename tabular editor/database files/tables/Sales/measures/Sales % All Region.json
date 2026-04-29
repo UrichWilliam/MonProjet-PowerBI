@@ -1,0 +1,16 @@
+{
+  "name": "Sales % All Region",
+  "expression": [
+    "",
+    "DIVIDE(",
+    "\tSUM(Sales[Sales]),",
+    "\tCALCULATE(",
+    "\t\tSUM(Sales[Sales]),",
+    "\t\tREMOVEFILTERS(Region)",
+    "\t)",
+    ")"
+  ],
+  "formatString": "#,0.00%;-#,0.00%;#,0.00%",
+  "displayFolder": "Ratios",
+  "lineageTag": "1107edf8-cd88-4078-8252-d8c0b6c3fd4a"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Product",
+  "lineageTag": "dd665867-e7a6-4a52-9aad-35c90f0546d2",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    },
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    }
+  ]
+}

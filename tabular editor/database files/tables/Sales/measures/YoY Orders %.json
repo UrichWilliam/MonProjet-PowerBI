@@ -1,0 +1,14 @@
+{
+  "name": "YoY Orders %",
+  "expression": [
+    "",
+    "DIVIDE(",
+    "    [Mes_Orders]- [Mes_LY_Orders],",
+    "    [Mes_LY_Orders]",
+    ")",
+    ""
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Order",
+  "lineageTag": "ad4bd5a9-2be6-4097-b668-a55ead6b165a"
+}

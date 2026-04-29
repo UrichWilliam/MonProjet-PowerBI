@@ -1,0 +1,21 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "UPN",
+  "dataType": "string",
+  "isNameInferred": true,
+  "isDataTypeInferred": true,
+  "description": [
+    "Salesperson related to Sales",
+    ""
+  ],
+  "isHidden": true,
+  "sourceColumn": "Salesperson (Performance)[UPN]",
+  "lineageTag": "bd07897b-faaf-433b-a871-b60f5f41113b",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "YoY Orders Label",
+  "expression": [
+    "",
+    "VAR pct = [YoY Orders %]",
+    "RETURN",
+    "IF(",
+    "    ISBLANK(pct),",
+    "    BLANK(),",
+    "    IF(",
+    "        pct >= 0,",
+    "        \"▲ \" & FORMAT(pct, \"0.00%\") & \" vs PY\",",
+    "        \"▼ \" & FORMAT(ABS(pct), \"0.00%\") & \" vs PY\"",
+    "    )",
+    ")"
+  ],
+  "displayFolder": "Order",
+  "lineageTag": "2afbc2de-ef92-4e98-963f-158b05cd1050"
+}

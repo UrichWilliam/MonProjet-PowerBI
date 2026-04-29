@@ -1,0 +1,18 @@
+{
+  "name": "Resellers",
+  "lineageTag": "43260477-c08a-4aee-ac91-d390468e3e33",
+  "levels": [
+    {
+      "name": "Business Type",
+      "ordinal": 0,
+      "column": "Business Type",
+      "lineageTag": "694cd890-b849-497e-82fe-675716567eb4"
+    },
+    {
+      "name": "Reseller",
+      "ordinal": 1,
+      "column": "Reseller",
+      "lineageTag": "594af5ab-b2e3-4e05-870e-9645e4644509"
+    }
+  ]
+}

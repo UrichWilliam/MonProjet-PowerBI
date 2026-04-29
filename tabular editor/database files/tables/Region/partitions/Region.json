@@ -1,0 +1,17 @@
+{
+  "name": "Region",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(SQLInstance, Database),",
+      "    dbo_DimSalesTerritory = Source{[Schema=\"dbo\",Item=\"DimSalesTerritory\"]}[Data],",
+      "    #\"Filtered Rows\" = Table.SelectRows(dbo_DimSalesTerritory, each ([SalesTerritoryAlternateKey] <> 0)),",
+      "    #\"Removed Other Columns\" = Table.SelectColumns(#\"Filtered Rows\",{\"SalesTerritoryKey\", \"SalesTerritoryRegion\", \"SalesTerritoryCountry\", \"SalesTerritoryGroup\"}),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Other Columns\",{{\"SalesTerritoryRegion\", \"Region\"}, {\"SalesTerritoryCountry\", \"Country\"}, {\"SalesTerritoryGroup\", \"Group\"}})",
+      "in",
+      "    #\"Renamed Columns\""
+    ]
+  }
+}

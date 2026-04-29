@@ -1,0 +1,14 @@
+{
+  "name": "YoY Sales %",
+  "expression": [
+    "",
+    "DIVIDE(",
+    "    [Mes_Sales]- [Mes_LY_Sales],",
+    "    [Mes_LY_Sales]",
+    ")",
+    ""
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Total",
+  "lineageTag": "ccdca458-4c5c-4583-85c4-b2b5909ba154"
+}

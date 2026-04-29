@@ -1,0 +1,19 @@
+{
+  "name": "Sales % Country",
+  "expression": [
+    "",
+    "IF(",
+    "\tISINSCOPE(Region[Region]),",
+    "\tDIVIDE(",
+    "\t\tSUM(Sales[Sales]),",
+    "\t\tCALCULATE(",
+    "\t\t\tSUM(Sales[Sales]),",
+    "\t\t\tREMOVEFILTERS(Region[Region])",
+    "\t\t)",
+    "\t)",
+    ")"
+  ],
+  "formatString": "0.00%;-0.00%;0.00%",
+  "displayFolder": "Ratios",
+  "lineageTag": "b4db606d-64a3-43bc-b242-d48130373e12"
+}

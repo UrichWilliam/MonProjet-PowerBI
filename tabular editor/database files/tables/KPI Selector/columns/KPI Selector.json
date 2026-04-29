@@ -1,0 +1,24 @@
+{
+  "type": "calculatedTableColumn",
+  "name": "KPI Selector",
+  "dataType": "string",
+  "isNameInferred": false,
+  "isDataTypeInferred": true,
+  "sourceColumn": "[Value1]",
+  "sortByColumn": "KPI Selector Commande",
+  "lineageTag": "f3655026-cea6-42fb-8e9a-d2a5c2a7d0f5",
+  "summarizeBy": "none",
+  "relatedColumnDetails": {
+    "groupByColumns": [
+      {
+        "groupingColumn": "KPI Selector Champs"
+      }
+    ]
+  },
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

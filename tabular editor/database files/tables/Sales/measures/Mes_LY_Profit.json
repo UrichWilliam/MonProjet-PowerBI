@@ -1,0 +1,16 @@
+{
+  "name": "Mes_LY_Profit",
+  "expression": [
+    "",
+    "[Mes_LY_Sales] - [Mes_LY_Cost]"
+  ],
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "displayFolder": "Profit",
+  "lineageTag": "c5e36e97-5efc-4612-807a-2e2b51857dd2",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

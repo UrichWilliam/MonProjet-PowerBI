@@ -1,0 +1,14 @@
+{
+  "name": "State-Province",
+  "dataType": "string",
+  "sourceColumn": "State-Province",
+  "lineageTag": "987ad92b-87ef-4c9a-87aa-7cd7c9a3036b",
+  "dataCategory": "StateOrProvince",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

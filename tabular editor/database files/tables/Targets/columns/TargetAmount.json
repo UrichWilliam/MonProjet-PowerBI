@@ -1,0 +1,24 @@
+{
+  "name": "TargetAmount",
+  "dataType": "decimal",
+  "isHidden": true,
+  "sourceColumn": "TargetAmount",
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "c8642aff-9cd7-43b3-ad05-ba32d7661db3",
+  "summarizeBy": "sum",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    },
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

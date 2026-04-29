@@ -1,0 +1,13 @@
+{
+  "name": "Color",
+  "dataType": "string",
+  "sourceColumn": "Color",
+  "lineageTag": "0fb9b24a-8122-4d20-b69f-7762edaced8c",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

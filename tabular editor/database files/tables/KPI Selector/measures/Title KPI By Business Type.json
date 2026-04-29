@@ -1,0 +1,5 @@
+{
+  "name": "Title KPI By Business Type",
+  "expression": "[Selected KPI Label] & \" by Business Type\"",
+  "lineageTag": "9da46f9c-20d2-4bcf-9d03-985c37b1ecd6"
+}

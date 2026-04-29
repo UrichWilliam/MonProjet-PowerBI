@@ -1,0 +1,17 @@
+{
+  "name": "Profit Variance",
+  "expression": [
+    "",
+    "[Mes_Profit] - [Mes_LY_Profit]",
+    ""
+  ],
+  "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+  "displayFolder": "Profit",
+  "lineageTag": "8574a51f-890d-42bc-81cb-c472b0f8052f",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Sales",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "    Source = Sql.Database(SQLInstance, Database),",
+      "    dbo_FactResellerSales = Source{[Schema=\"dbo\",Item=\"FactResellerSales\"]}[Data],",
+      "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_FactResellerSales,{\"SalesOrderNumber\", \"OrderDate\", \"ProductKey\", \"ResellerKey\", \"EmployeeKey\", \"SalesTerritoryKey\", \"OrderQuantity\", \"UnitPrice\", \"TotalProductCost\", \"SalesAmount\", \"DimProduct\"}),",
+      "    #\"Expanded DimProduct\" = Table.ExpandRecordColumn(#\"Removed Other Columns\", \"DimProduct\", {\"StandardCost\"}, {\"StandardCost\"}),",
+      "    #\"Added Custom\" = Table.AddColumn(#\"Expanded DimProduct\", \"Cost\", each if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost]),",
+      "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"StandardCost\", \"TotalProductCost\"}),",
+      "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Columns\",{{\"Cost\", type number}}),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"OrderQuantity\", \"Quantity\"}, {\"UnitPrice\", \"Unit Price\"}, {\"SalesAmount\", \"Sales\"}}),",
+      "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Quantity\", Int64.Type}, {\"Unit Price\", Currency.Type}, {\"Sales\", Currency.Type}, {\"Cost\", Currency.Type}})",
+      "in",
+      "    #\"Changed Type1\""
+    ]
+  }
+}

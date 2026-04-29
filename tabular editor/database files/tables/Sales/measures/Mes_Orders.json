@@ -1,0 +1,10 @@
+{
+  "name": "Mes_Orders",
+  "expression": [
+    "",
+    "DISTINCTCOUNT(Sales[SalesOrderNumber])"
+  ],
+  "formatString": "#,0",
+  "displayFolder": "Order",
+  "lineageTag": "a17bce87-617a-4ada-b8bd-86a1532c1836"
+}

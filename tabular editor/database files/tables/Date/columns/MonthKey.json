@@ -1,0 +1,20 @@
+{
+  "type": "calculated",
+  "name": "MonthKey",
+  "dataType": "int64",
+  "isDataTypeInferred": true,
+  "isHidden": true,
+  "expression": [
+    "",
+    "(YEAR('Date'[Date]) * 100) + MONTH('Date'[Date])"
+  ],
+  "formatString": "0",
+  "lineageTag": "04ad1cb6-9f8f-4d45-aa2b-1aa9e9080a92",
+  "summarizeBy": "count",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

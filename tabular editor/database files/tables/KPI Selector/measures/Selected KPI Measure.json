@@ -1,0 +1,11 @@
+{
+  "name": "Selected KPI Measure",
+  "expression": "SELECTEDMEASURE()",
+  "lineageTag": "a96e01d1-78e0-4f60-869d-c8cfbee35b97",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"isGeneralNumber\":true}"
+    }
+  ]
+}

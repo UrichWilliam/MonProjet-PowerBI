@@ -1,0 +1,15 @@
+{
+  "name": "Selected KPI Label",
+  "expression": [
+    "",
+    "SWITCH(",
+    "    [Selected KPI Number],",
+    "    0, \"Total Sales\",",
+    "    1, \"Total Profit\",",
+    "    2, \"Profit Margin\",",
+    "    3, \"Orders\"",
+    ")",
+    ""
+  ],
+  "lineageTag": "854d0da8-c028-42a8-825b-5bf746d26663"
+}

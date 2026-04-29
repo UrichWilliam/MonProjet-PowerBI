@@ -1,0 +1,16 @@
+{
+  "name": "Median Price",
+  "expression": [
+    "",
+    "MEDIAN(Sales[Unit Price])"
+  ],
+  "formatString": "\\$#,0.00;-\\$#,0.00;\\$#,0.00",
+  "displayFolder": "Pricing",
+  "lineageTag": "ceacc498-28dd-435f-b5b0-23a367b3a20c",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}

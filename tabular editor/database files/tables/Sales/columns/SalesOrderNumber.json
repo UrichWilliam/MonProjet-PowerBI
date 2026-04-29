@@ -1,0 +1,19 @@
+{
+  "name": "SalesOrderNumber",
+  "dataType": "string",
+  "isHidden": true,
+  "sourceColumn": "SalesOrderNumber",
+  "lineageTag": "f7a951a1-052d-44bb-911c-0f487977d8e6",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Database",
+  "kind": "m",
+  "expression": "\"AdventureWorksDW2020\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+  "lineageTag": "f94b3b35-3493-44cd-9265-bec13c7dfdbf",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Text"
+    },
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    }
+  ]
+}

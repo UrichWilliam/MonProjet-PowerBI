@@ -1,0 +1,7 @@
+{
+  "name": "24710f3d-437c-36ed-a48d-2bd6e0ab3c89",
+  "fromTable": "SalespersonRegion",
+  "fromColumn": "EmployeeKey",
+  "toTable": "Salesperson (Performance)",
+  "toColumn": "EmployeeKey"
+}

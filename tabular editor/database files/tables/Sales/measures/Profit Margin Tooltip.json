@@ -1,0 +1,14 @@
+{
+  "name": "Profit Margin Tooltip",
+  "expression": [
+    "",
+    "IF(",
+    "    [Mes_Profit_Margin] < 0,",
+    "    \"Negative margin indicates a shift from profit to loss vs previous year.\",",
+    "    BLANK()",
+    ")",
+    ""
+  ],
+  "displayFolder": "Profit",
+  "lineageTag": "2a8c5358-5050-4f10-a795-e5f3c134ac38"
+}

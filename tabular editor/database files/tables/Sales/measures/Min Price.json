@@ -1,0 +1,16 @@
+{
+  "name": "Min Price",
+  "expression": [
+    "",
+    "MIN(Sales[Unit Price])"
+  ],
+  "formatString": "\\$#,0.00;-\\$#,0.00;\\$#,0.00",
+  "displayFolder": "Pricing",
+  "lineageTag": "95899f18-b926-43ba-90d6-d0831c8cf34c",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}

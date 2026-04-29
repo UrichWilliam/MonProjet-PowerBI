@@ -1,0 +1,16 @@
+{
+  "name": "SQLInstance",
+  "kind": "m",
+  "expression": "\"localhost\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+  "lineageTag": "9418635c-5c3b-4bc6-b766-8936ed156183",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Text"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Title KPI By Sales Representative",
+  "expression": "[Selected KPI Label] & \" by Sales Representative\"",
+  "lineageTag": "43c64028-1e3d-4ac9-8978-c16b7aa37be9"
+}

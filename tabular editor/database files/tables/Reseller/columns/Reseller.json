@@ -1,0 +1,13 @@
+{
+  "name": "Reseller",
+  "dataType": "string",
+  "sourceColumn": "Reseller",
+  "lineageTag": "b487d3bb-83eb-4ca3-a470-8efb781d68d2",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

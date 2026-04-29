@@ -1,0 +1,29 @@
+{
+  "name": "Mes_KPI_Max",
+  "expression": [
+    "",
+    "    CALCULATE(",
+    "        MAXX(",
+    "            ALL('Product'[Category]), ",
+    "            --[Mes_Sales]",
+    "            --'KPI Selector'[Selected KPI Value]",
+    "            --SELECTEDMEASURE()",
+    "            SWITCH(",
+    "                [Selected KPI Number],",
+    "                0, [Mes_Sales],",
+    "                1, [Mes_Profit],",
+    "                2, [Mes_Profit_Margin],",
+    "                3, [Mes_Orders]",
+    "            )",
+    "        )",
+    "    )"
+  ],
+  "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+  "lineageTag": "13c30007-c417-4a2a-ad3d-2f966a96c81c",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-US\"}"
+    }
+  ]
+}

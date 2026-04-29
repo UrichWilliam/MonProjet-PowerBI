@@ -1,0 +1,10 @@
+{
+  "name": "YoY Sales Direction",
+  "expression": [
+    "",
+    "IF( [YoY Sales %] >= 0, \"Up\", \"Down\" )",
+    ""
+  ],
+  "displayFolder": "Total",
+  "lineageTag": "caa12e3e-2d67-42cb-a7cf-3c9afdef5a99"
+}

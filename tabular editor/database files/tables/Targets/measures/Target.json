@@ -1,0 +1,18 @@
+{
+  "name": "Target",
+  "expression": [
+    "",
+    "IF(",
+    "\tHASONEVALUE('Salesperson (Performance)'[Salesperson]),",
+    "\tSUM(Targets[TargetAmount])",
+    ")"
+  ],
+  "formatString": "\\$#,0;-\\$#,0;\\$#,0",
+  "lineageTag": "91afbca0-b836-4e6e-b565-be9ff9dce92f",
+  "annotations": [
+    {
+      "name": "PBI_FormatHint",
+      "value": "{\"currencyCulture\":\"en-AU\"}"
+    }
+  ]
+}
