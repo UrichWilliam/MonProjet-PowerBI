@@ -63,11 +63,7 @@ def parse_table(tmdl_path: Path) -> dict:
     is_fact = bool(re.search(r'^\s*measure\s+', text, re.MULTILINE))
 
     columns = []
-    '''col_pattern = re.compile(
-        r'^\s*(?:column|calculatedColumn)\s+'
-        r'(?:"([^"]+)"|\'([^\']+)\'|([^\s{]+))\s*(?:\{|\n)',
-        re.MULTILINE,
-    )'''
+  
     col_pattern = re.compile(
         r'^\s*(?:column|calculatedColumn)\s+'
         r'(?:"([^"]+)"|\'([^\']+)\'|([^\s{]+))\s*(?:\{|\n)',
